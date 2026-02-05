@@ -354,5 +354,11 @@ def main():
     print("Analysis complete. Reports saved.")
     print("="*50)
 
+# Quick deployment version
+analyzer = PortfolioVaRAnalyzer(['AAPL', 'MSFT'], [0.6, 0.4], 500000)
+analyzer.fetch_data(start_date="2022-01-01")
+results = analyzer.calculate_var(confidence_level=0.99, time_horizon_days=10)
+print(f"10-Day VaR at 99%: ${results['var_nday']:,.2f}")
+
 if __name__ == "__main__":
     main()
