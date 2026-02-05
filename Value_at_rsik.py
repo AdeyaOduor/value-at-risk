@@ -14,7 +14,6 @@ import datetime as dt
 
 tickers = ['AAPL','FB', 'C', 'DIS']
 
- 
 
 # Set the investment weights (I arbitrarily picked for example)
 
